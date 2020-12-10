@@ -16,7 +16,7 @@ struct ContentView: View {
                 CardView(card: card)
                     .onTapGesture {
                         viewModel.choose(card: card)
-                }
+                    }
             }
         }
         .padding()
@@ -41,7 +41,7 @@ struct CardView: View {
                 RoundedRectangle(cornerRadius: 10.0)
                 .fill()
             }
-        }
+        }.aspectRatio(contentMode: .fit)
     }
 }
 
